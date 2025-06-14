@@ -1,0 +1,7 @@
+account_type,geo_enabled,count
+,False,1
+,human,1
+bot,True,2716
+bot,False,9709
+human,False,10651
+human,True,14361

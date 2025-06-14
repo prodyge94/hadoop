@@ -1,0 +1,6 @@
+account_type,verified,count
+,,2
+bot,True,316
+bot,False,12109
+human,False,17777
+human,True,7235
