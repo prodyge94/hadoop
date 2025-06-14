@@ -9,7 +9,7 @@ services:
       - "8020:8020"     # RPC (optionnel pour accès externe)
     volumes:
       - hadoop_namenode:/hadoop/dfs/name
-      - ./dataset.csv:/dataset/dataset.csv
+      - ./twitter_human_bots_dataset.csv:/twitter/twitter_human_bots_dataset.csv
 
   datanode:
     image: bde2020/hadoop-datanode:2.0.0-hadoop2.7.4-java8
@@ -23,7 +23,7 @@ services:
       - "50075:50075"   # Web UI DataNode 2.x
     volumes:
       - hadoop_datanode:/hadoop/dfs/data
-      - ./dataset.csv:/dataset/dataset.csv
+      - ./twitter_human_bots_dataset.csv:/twitter/twitter_human_bots_dataset.csv
 
 volumes:
   hadoop_namenode:
