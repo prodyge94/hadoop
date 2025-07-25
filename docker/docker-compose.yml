@@ -5,7 +5,7 @@ services:
     environment:
       - CLUSTER_NAME=single-node-demo
     ports:
-      - "50070:50070"   # Web UI Hadoop 2.x
+      - "8081:50070"   # Web UI Hadoop 2.x
       - "8020:8020"     # RPC (optionnel pour accès externe)
     volumes:
       - hadoop_namenode:/hadoop/dfs/name
@@ -20,7 +20,7 @@ services:
     depends_on:
       - namenode
     ports:
-      - "50075:50075"   # Web UI DataNode 2.x
+      - "8082:50075"   # Web UI DataNode 2.x
     volumes:
       - hadoop_datanode:/hadoop/dfs/data
       - ./twitter_human_bots_dataset.csv:/twitter/twitter_human_bots_dataset.csv
